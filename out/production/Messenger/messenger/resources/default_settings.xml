@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+    <username>Default User</username>
+    <client>
+        <address>127.0.0.1</address>
+        <port>50000</port>
+        <password></password>
+    </client>
+
+    <server>
+        <port>50000</port>
+        <password></password>
+    </server>
+</settings>

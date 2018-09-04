@@ -1,0 +1,44 @@
+.data
+Input: .asciiz "RacecaR"
+True: .asciiz "TRUE"
+False: .asciiz "FALSE"
+Print: .space 4
+
+.code
+DADDIU R4, R0, #0001
+L1:
+LB R1, Input(R2)
+DADDIU R2, R2, #0001
+BEQZ R1, COMPARE
+BNEZ R1, LENGTH
+B L1
+
+LENGTH:
+DADDIU R3, R3, #0001
+B L1
+
+COMPARE:
+
+BEQZ R3, TRUE
+LB R6, Input(R5)	;Input(0)
+DSUB R3, R3, R4
+LB R1, Input(R3)
+BNE R6, R1, FALSE
+DADDU R5, R5, R4
+B COMPARE
+
+FALSE:
+DADDI R1, R0, False
+SW R1, Print(R0)
+DADDI R14, R0, Print
+SYSCALL 5
+B END
+
+TRUE:
+DADDI R1, R0, True
+SW R1, Print(R0)
+DADDI R14, R0, Print
+SYSCALL 5
+
+END:
+SYSCALL 0

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="pnlMain" stylesheets="@../../resources/main.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="messenger.application.Landing">
+   <children>
+      <TextField fx:id="txtUsername" layoutX="51.0" layoutY="52.0" prefHeight="33.0" prefWidth="308.0" promptText="Username..." />
+      <TextField fx:id="txtAddress" layoutX="51.0" layoutY="94.0" prefHeight="33.0" prefWidth="203.0" promptText="Server Address..." />
+      <TextField fx:id="txtPort" layoutX="261.0" layoutY="94.0" prefHeight="33.0" prefWidth="98.0" promptText="Port..." />
+      <PasswordField fx:id="txtPassword" layoutX="51.0" layoutY="135.0" prefHeight="33.0" prefWidth="203.0" promptText="Password (if required)..." />
+      <Button fx:id="btnJoin" layoutX="261.0" layoutY="135.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="98.0" text="Join" />
+      <TextArea fx:id="taLog" editable="false" focusTraversable="false" layoutX="51.0" layoutY="464.0" prefHeight="112.0" prefWidth="308.0" promptText="Server log..." wrapText="true" />
+      <Button fx:id="btnServer" layoutX="251.0" layoutY="382.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="108.0" text="Start Server" />
+      <AnchorPane fx:id="pnlTool" layoutX="2.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="34.0" layoutY="6.0" text="Network Messenger" textFill="#555555">
+               <font>
+                  <Font name="Open Sans" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnClose" layoutX="348.0" layoutY="2.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="33.0" styleClass="btnClose" text="X" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <MenuButton layoutX="268.0" layoutY="2.0" mnemonicParsing="false" text="Settings" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <MenuItem fx:id="miSaveClient" mnemonicParsing="false" text="Save Client Settings" />
+                <MenuItem fx:id="miSaveServer" mnemonicParsing="false" text="Save Server Settings" />
+                  <MenuItem fx:id="miSaveAll" mnemonicParsing="false" text="Save All" />
+              </items>
+            </MenuButton>
+            <ImageView fitHeight="30.0" fitWidth="27.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtSPort" layoutX="51.0" layoutY="382.0" prefHeight="33.0" prefWidth="191.0" promptText="Server Port..." />
+      <ImageView fitHeight="188.0" fitWidth="215.0" layoutX="104.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/logo.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="txtSPassword" layoutX="51.0" layoutY="423.0" prefHeight="33.0" prefWidth="308.0" promptText="Server Password..." />
+   </children>
+</AnchorPane>
